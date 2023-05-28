@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Student Data Insert</title>
+<style>
+label {
+	display: inline-block;
+	width: 150px;
+	text-align: right;
+}
+
+#sub {
+	display: flex;
+	justify-content: flex-end;
+	padding-right: 20px;
+}
+
+#sub2 {
+	padding-left: 10px;
+}
+
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.42857143;
+	font-weight: bold;
+}
+</style>
+</head>
+<body>
+
+	<form action="insert" id="insertbutton">
+		<table>
+			<tr>
+				<td><label>Register Number :</label></td>
+				<td><input type="number" name="register" required="required"
+					placeholder="Enter Register No"
+					oninvalid="this.setCustomValidity('Enter Register Number Here')"
+					oninput="this.setCustomValidity('')"></td>
+			</tr>
+			<tr>
+				<td><label>Name :</label></td>
+				<td><input type="text" name="name" required="required"
+					placeholder="Enter Name"
+					oninvalid="this.setCustomValidity('Enter Student Name Here')"
+					oninput="this.setCustomValidity('')"></td>
+			</tr>
+			<tr>
+				<td><label>Date Of Birth :</label></td>
+				<td><input type="date" name="dob" required="required"
+					oninvalid="this.setCustomValidity('Choose Date of Birth Here')"
+					oninput="this.setCustomValidity('')"></td>
+			</tr>
+			<tr>
+				<td><label>Internal Kannada Mark :</label></td>
+				<td><input type="number" name="internal_kannada_mark"
+					required="required" placeholder="Enter Kannada Mark"
+					oninvalid="this.setCustomValidity('Enter Internal Kannada Mark Here 0-25')"
+					oninput="this.setCustomValidity('')"></td>
+			</tr>
+			<tr>
+				<td><label>Internal English Mark :</label></td>
+				<td><input type="number" name="internal_english_mark"
+					required="required" placeholder="Enter English Mark"
+					oninvalid="this.setCustomValidity('Enter Internal English Mark Here 0-20')"
+					oninput="this.setCustomValidity('')"></td>
+			</tr>
+			<tr>
+				<td><label>Internal Hindi Mark :</label></td>
+				<td><input type="number" name="internal_hindi_mark"
+					required="required" placeholder="Enter Hindi Mark"
+					oninvalid="this.setCustomValidity('Enter Internal Hindi Mark Here 0-20')"
+					oninput="this.setCustomValidity('')"></td>
+			</tr>
+			<tr>
+				<td><label>Internal Math Mark :</label></td>
+				<td><input type="number" name="internal_math_mark"
+					required="required" placeholder="Enter Math Mark"
+					oninvalid="this.setCustomValidity('Enter Internal Math Mark Here 0-20')"
+					oninput="this.setCustomValidity('')"></td>
+			</tr>
+			<tr>
+				<td><label>Internal Science Mark :</label></td>
+				<td><input type="number" name="internal_science_mark"
+					required="required" placeholder="Enter Science Mark"
+					oninvalid="this.setCustomValidity('Enter Internal Science Mark Here 0-20')"
+					oninput="this.setCustomValidity('')"></td>
+			</tr>
+			<tr>
+				<td><label>Internal Social Science Mark :</label></td>
+				<td><input type="number" name="internal_social_science_mark"
+					required="required" placeholder="Enter Social Science Mark"
+					oninvalid="this.setCustomValidity('Enter Internal Social Science Mark Here 0-20')"
+					oninput="this.setCustomValidity('')"></td>
+			</tr>
+			<tr>
+				<td><label>External Kannada Mark :</label></td>
+				<td><input type="number" name="external_kannada_mark"
+					required="required" placeholder="Enter Kannada Mark"
+					oninvalid="this.setCustomValidity('Enter External Kannada Mark Here 0-100')"
+					oninput="this.setCustomValidity('')"></td>
+			</tr>
+			<tr>
+				<td><label>External English Mark :</label></td>
+				<td><input type="number" name="external_english_mark"
+					required="required" placeholder="Enter English Mark"
+					oninvalid="this.setCustomValidity('Enter External English Mark Here 0-80')"
+					oninput="this.setCustomValidity('')"></td>
+			</tr>
+			<tr>
+				<td><label>External Hindi Mark :</label></td>
+				<td><input type="number" name="external_hindi_mark"
+					required="required" placeholder="Enter Hindi Mark"
+					oninvalid="this.setCustomValidity('Enter External Hindi Mark Here 0-80')"
+					oninput="this.setCustomValidity('')"></td>
+			</tr>
+			<tr>
+				<td><label>External Math Mark :</label></td>
+				<td><input type="number" name="external_math_mark"
+					required="required" placeholder="Enter Math Mark"
+					oninvalid="this.setCustomValidity('Enter External Math Mark Here 0-80')"
+					oninput="this.setCustomValidity('')"></td>
+			</tr>
+			<tr>
+				<td><label>External Science Mark :</label></td>
+				<td><input type="number" name="external_science_mark"
+					required="required" placeholder="Enter Science Mark"
+					oninvalid="this.setCustomValidity('Enter External Science Mark Here 0-80')"
+					oninput="this.setCustomValidity('')"></td>
+			</tr>
+			<tr>
+				<td><label>External Social Science Mark :</label></td>
+				<td><input type="number" name="external_social_science_mark"
+					required="required" placeholder="Enter Social Science Mark"
+					oninvalid="this.setCustomValidity('Enter External Social Science Mark Here 0-80')"
+					oninput="this.setCustomValidity('')"></td>
+			</tr>
+			<tr>
+				<td><label>Physical Health :</label></td>
+				<td><select name="physical" required="required"
+					oninvalid="this.setCustomValidity('Select Physical Health Grade in the list')"
+					oninput="this.setCustomValidity('')">
+						<option value="" selected="selected">Grade</option>
+
+						<option value="A+">A+</option>
+						<option value="A">A</option>
+						<option value="B+">B+</option>
+						<option value="B">B</option>
+						<option value="C+">C+</option>
+						<option value="C">C</option>
+						<option value="D+">D+</option>
+						<option value="D">D</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td><label>Attitude Values :</label></td>
+				<td><select name="attitude" required="required"
+					oninvalid="this.setCustomValidity('Select Attitude Values Grade in the list')"
+					oninput="this.setCustomValidity('')">
+						<option value="" selected="selected">Grade</option>
+
+						<option value="A+">A+</option>
+						<option value="A">A</option>
+						<option value="B+">B+</option>
+						<option value="B">B</option>
+						<option value="C+">C+</option>
+						<option value="C">C</option>
+						<option value="D+">D+</option>
+						<option value="D">D</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td><label>Work Experience :</label></td>
+				<td><select name="work" required="required"
+					oninvalid="this.setCustomValidity('Select Work Experience Grade in the list')"
+					oninput="this.setCustomValidity('')">
+						<option value="" selected="selected">Grade</option>
+
+						<option value="A+">A+</option>
+						<option value="A">A</option>
+						<option value="B+">B+</option>
+						<option value="B">B</option>
+						<option value="C+">C+</option>
+						<option value="C">C</option>
+						<option value="D+">D+</option>
+						<option value="D">D</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td><label>Art Education :</label></td>
+				<td><select name="art" required="required"
+					oninvalid="this.setCustomValidity('Select Art Education Grade in the list')"
+					oninput="this.setCustomValidity('')">
+						<option value="" selected="selected">Grade</option>
+
+						<option value="A+">A+</option>
+						<option value="A">A</option>
+						<option value="B+">B+</option>
+						<option value="B">B</option>
+						<option value="C+">C+</option>
+						<option value="C">C</option>
+						<option value="D+">D+</option>
+						<option value="D">D</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td id="sub"><button form="insertbutton" type="submit">Submit</button></td>
+				<td id="sub2"><a href="index.jsp"><button id="butt2">Cancel</button></a></td>
+			</tr>
+		</table>
+	</form>
+
+</body>
+</html>

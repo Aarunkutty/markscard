@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="delete" id="del">
+		<h2>Delete data</h2>
+		<table>
+			<tr>
+				<td><label>Register Number :</label></td>
+				<td><input type="number" name="register" required="required"
+					placeholder="Enter Register No"
+					oninvalid="this.setCustomValidity('Enter Register Number Here')"
+					oninput="this.setCustomValidity('')"></td>
+			</tr>
+		</table>
+		<button form="del">Submit</button>
+		<a href="kseeb.html"><button id="butt2">Cancel</button></a>
+	</form>
+
+</body>
+</html>
